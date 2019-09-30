@@ -11,56 +11,76 @@
 // 7.)Try also too to not focus too much on creating every variable in the beginning, focus on getting one thing working.
 
 
-
-
-
-
-
 $(document).ready(function () {
 
-        var computerRandomNumber = "";
-        var userTotalScore = "";
-        var crystalObsidian = "";
-        var crystalAmethyst = "";
-        var crystalTurquoise = "";
-        var crystalQuartz = "";
+    var computerRandomNumber = "";
+    var userTotalScore = "";
+    var wins = "";
+    var loss = "";
+    //I can make more messages, like a greeting when I can understand how to do that and make it go away to start the game.
+    var gameStatus = ["You Win!", "You Lose, try again"];
+    var crystalObsidian = "";
+    var crystalAmethyst = "";
+    var crystalTurquoise = "";
+    var crystalQuartz = "";
 
+    //We're not clicking a button to generate random number, so this is not a click!
+    function computerRandomNum(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
 
-
-
-
+    }
+    document.getElementById("#computer-number").innerHTML = computerRandomNum(19, 120);
 
     function initializeCrystalGame() {
 
         var computerRandomNumber = "";
         var userTotalScore = "";
-        var crystalObsidian = "";
         var crystalAmethyst = "";
+        var crystalObsidian = "";
         var crystalTurquoise = "";
         var crystalQuartz = "";
 
-        //this is probanly not be empty, since the random numbers will be assigned to score and crystals.
 
-        $("#","#","#","#","#").empty();
 
+        //$("#computer-number").on("click", function(){
+
+        //computerRandomNumber = Math.floor(Math.random() * 120 + 19);
+
+
+        //})
+
+        //Need to create a random math function next?
+        //Need to use the .hide() method to mask the numbers on each one of the crsytals.
+        $("#amethyst").on("click", function () {
+
+
+            for (var i = 1; i < 12; i++) {
+
+                var randomCrystalNumber = Math.floor(Math.random() * 12 + 1);
+
+                crystalAmethyst = randomCrystalNumber + crystalAmethyst;
+                crystalObsidian = randomCrystalNumber + crystalObsidian;
+                crystalTurquoise = randomCrystalNumber + crystalTurquoise;
+                crystalQuartz = randomCrystalNumber + crystalQuartz;
+
+            }
+            $("#amethyst", "#obsidian", "#turquoise", "quartz").text();
+
+        });
     }
 
 
 
-    //Need to create a random math function next?
-
-
-
-    //Need to use the .hide() method to mask the numbers on each one of the crsytals 
 
 
 
 
 
-
-
-
-
+    //Start Conditionals
+    if (userTotalScore === computerRandomNumber) {
+        wins++;
+        gameStatus[0];
+    }
 
 
 
@@ -75,4 +95,12 @@ $(document).ready(function () {
 
 
 
-}
+    //Need to initialze the start of a new game on a win or loss, so need to call the initializeCrystalGame function.
+
+
+    //Need to initialize the start of a new game when user lands on page, so again, need to call the initializeCrystalGame function. DONE! :)
+
+    initializeCrystalGame();
+
+
+});
