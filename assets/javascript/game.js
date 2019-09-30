@@ -18,15 +18,40 @@
 
 $(document).ready(function () {
 
+        var computerRandomNumber = "";
+        var userTotalScore = "";
+        var crystalObsidian = "";
+        var crystalAmethyst = "";
+        var crystalTurquoise = "";
+        var crystalQuartz = "";
 
 
 
 
 
 
+    function initializeCrystalGame() {
+
+        var computerRandomNumber = "";
+        var userTotalScore = "";
+        var crystalObsidian = "";
+        var crystalAmethyst = "";
+        var crystalTurquoise = "";
+        var crystalQuartz = "";
+
+        //this is probanly not be empty, since the random numbers will be assigned to score and crystals.
+
+        $("#","#","#","#","#").empty();
+
+    }
 
 
 
+    //Need to create a random math function next?
+
+
+
+    //Need to use the .hide() method to mask the numbers on each one of the crsytals 
 
 
 
