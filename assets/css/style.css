@@ -1,3 +1,7 @@
+body {
+    background: #666666;
+}
+
 div {
     margin: 20px;
     padding: 20px;
@@ -10,11 +14,22 @@ h1 {
     font-weight: 700;
     margin-right: 490px;
     text-align: center;
-    background: green;
+    border-radius: 10px;
+    background: #00FFFF;
+}
+
+h2 {
+    margin: 40px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background: #00FFFF;
+
 }
 
 button {
-    margin: 20px;
-    padding: 20px;
-    background: green;
+    margin: 50px;
+    padding: 40px;
+    border-radius: 10px;
+    background: #437C17;
 }

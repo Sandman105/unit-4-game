@@ -13,32 +13,57 @@
 
 $(document).ready(function () {
 
-    var computerRandomNumber = "";
+    var gameRandomNumber = "";
     var userTotalScore = "";
     var wins = "";
     var loss = "";
     //I can make more messages, like a greeting when I can understand how to do that and make it go away to start the game.
-    var gameStatus = ["You Win!", "You Lose, try again"];
+    //var gameStatus = ["You Win!", "You Lose, try again"];
     var crystalObsidian = "";
     var crystalAmethyst = "";
     var crystalTurquoise = "";
     var crystalQuartz = "";
 
+    //FUNCTIONS========================================================
     //We're not clicking a button to generate random number, so this is not a click!
+    
     function computerRandomNum(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
 
     }
-    document.getElementById("#computer-number").innerHTML = computerRandomNum(19, 120);
+    //Used this for testing to make sure function worked and displayed random numbers
+    //document.getElementById("computer-number").innerHTML = computerRandomNum(19, 120);
+    //document.getElementById("amethyst").innerHTML = computerRandomNum(1,12);
+    //document.getElementById("obsidian").innerHTML = computerRandomNum(1,12);
+    //document.getElementById("turquoise").innerHTML = computerRandomNum(1,12);
+    //document.getElementById("quartz").innerHTML = computerRandomNum (1,12);
+
+    console.log(computerRandomNum(19, 120));
+
+
 
     function initializeCrystalGame() {
 
-        var computerRandomNumber = "";
-        var userTotalScore = "";
-        var crystalAmethyst = "";
-        var crystalObsidian = "";
-        var crystalTurquoise = "";
-        var crystalQuartz = "";
+        var gameRandomNumber = computerRandomNum(19,120);
+        var userTotalScore = 0;
+        var crystalAmethyst = computerRandomNum(1,12);
+        var crystalObsidian = computerRandomNum(1,12);
+        var crystalTurquoise = computerRandomNum(1,12);
+        var crystalQuartz = computerRandomNum(1,12);
+
+        //using the ID tag here with the .html we saw today.
+        $("#user-score").html(userTotalScore);
+        $("#computer-number").html(gameRandomNumber);
+
+        console.log("Game Number: " + gameRandomNumber);
+        console.log("-------------------------------");
+        console.log("-------------------------------");
+        console.log("Amethyst: " + crystalAmethyst);
+        console.log("Obsidian: " + crystalObsidian);
+        console.log("Turquoise: " + crystalTurquoise);
+        console.log("Quartz: " + crystalQuartz);
+
+        //So we need start new game with this initialize function, new computerRandomNumber, new random numbers for each one of the crystals, make sure the user score is set to 0.
 
 
 
@@ -51,36 +76,60 @@ $(document).ready(function () {
 
         //Need to create a random math function next?
         //Need to use the .hide() method to mask the numbers on each one of the crsytals.
-        $("#amethyst").on("click", function () {
 
+        //for (var i = 1; i < 12; i++) {
 
-            for (var i = 1; i < 12; i++) {
+        //    randomCrystalNumber = Math.floor(Math.random() * 12 + 1);
 
-                var randomCrystalNumber = Math.floor(Math.random() * 12 + 1);
+        //     crystalAmethyst = randomCrystalNumber + crystalAmethyst;
+        //     //crystalObsidian = randomCrystalNumber + crystalObsidian;
+        //     //crystalTurquoise = randomCrystalNumber + crystalTurquoise;
+        //     //crystalQuartz = randomCrystalNumber + crystalQuartz;
 
-                crystalAmethyst = randomCrystalNumber + crystalAmethyst;
-                crystalObsidian = randomCrystalNumber + crystalObsidian;
-                crystalTurquoise = randomCrystalNumber + crystalTurquoise;
-                crystalQuartz = randomCrystalNumber + crystalQuartz;
+        // }
 
-            }
-            $("#amethyst", "#obsidian", "#turquoise", "quartz").text();
+        //document.getElementById("amethyst").innerHTML = crystalAmethyst;
 
-        });
+    }
+
+    amethystNumber = function() {
+        userTotalScore = userTotalScore + crystalAmethyst;
+
+        $("#user-score").html(userTotalScore);
     }
 
 
+    //So these are my on click functions for each one of the crystals. All working.
+
+    $("#amethyst").on("click", function () {
+        amethystNumber();
+    });
+
+    $("#obsidian").on("click", function () {
+        alert("test");
+    });
+
+    $("#turquoise").on("click", function () {
+        alert("test");
+    });
+
+    $("#quartz").on("click", function () {
+        alert("test");
+    });
 
 
-
-
-
-
+    
+    
     //Start Conditionals
-    if (userTotalScore === computerRandomNumber) {
-        wins++;
-        gameStatus[0];
-    }
+    //if (userTotalScore === computerRandomNumber) {
+    //    wins++;
+        
+    //}
+
+    //else if (userTotalScore > computerRandomNumber) {
+    //    loss--;
+    
+    //}
 
 
 
