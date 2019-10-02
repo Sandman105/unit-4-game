@@ -112,7 +112,7 @@ $(document).ready(function () {
         $("#user-score").html(userTotalScore);
 
         if (userTotalScore > gameRandomNumber) {
-            loss--;
+            loss++;
             alert("You Lose, Try Again");
             $("#loser").val(loss);
     
