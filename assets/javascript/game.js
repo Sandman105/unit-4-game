@@ -114,7 +114,7 @@ $(document).ready(function () {
         if (userTotalScore > gameRandomNumber) {
             loss++;
             alert("You Lose, Try Again");
-            $("#loser").val(loss);
+            $("#loser-text").text(loss);
     
             initializeCrystalGame();
         }
@@ -122,7 +122,7 @@ $(document).ready(function () {
         else if (userTotalScore === gameRandomNumber) {
             wins++;
             alert("You Win!");
-            $("#winner").val(wins);
+            $("#winner-text").text(wins);
     
     
             initializeCrystalGame();
