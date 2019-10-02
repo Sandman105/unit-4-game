@@ -110,6 +110,42 @@ $(document).ready(function () {
     $("#amethyst").on("click", function () {
         userTotalScore += parseInt(crystalAmethyst);
         $("#user-score").html(userTotalScore);
+        winCheck();
+    });
+
+    $("#obsidian").on("click", function () {
+        userTotalScore += parseInt(crystalObsidian);
+        $("#user-score").html(userTotalScore);
+        winCheck();
+    });
+
+    $("#turquoise").on("click", function () {
+        userTotalScore += parseInt(crystalTurquoise);
+        $("#user-score").html(userTotalScore);
+        winCheck();
+    });
+
+    $("#quartz").on("click", function () {
+        userTotalScore += parseInt(crystalQuartz);
+        $("#user-score").html(userTotalScore);
+        winCheck();
+    });
+
+    console.log("User Score " + userTotalScore);
+
+
+
+    //I'd like to this function gameStatus and use that to display win, lose inside my conditionals.
+    
+    //gameStatus = function (word) {
+
+    //}
+    //gameStatus("You Win!!!");
+    //gameStatus("You Lose, Try Again");
+
+
+    //Conditionals - Conditional works now and increments under the Amethyst click function, so guessing I need a function to apply to all of those clicks, instead of putting conditionals under each one, be DRY!
+    winCheck = function () {
 
         if (userTotalScore > gameRandomNumber) {
             loss++;
@@ -128,37 +164,8 @@ $(document).ready(function () {
             initializeCrystalGame();
 
         }
-    });
 
-    $("#obsidian").on("click", function () {
-        userTotalScore += parseInt(crystalObsidian);
-        $("#user-score").html(userTotalScore);
-    });
-
-    $("#turquoise").on("click", function () {
-        userTotalScore += parseInt(crystalTurquoise);
-        $("#user-score").html(userTotalScore);
-    });
-
-    $("#quartz").on("click", function () {
-        userTotalScore += parseInt(crystalQuartz);
-        $("#user-score").html(userTotalScore);
-    });
-
-    console.log("User Score " + userTotalScore);
-
-    //gameStatus = function (word) {
-
-    //}
-    //gameStatus("You Win!!!");
-    //gameStatus("You Lose, Try Again");
-
-    //I'd like to this function gameStatus and use that to display win, lose inside my conditionals.
-
-
-
-    //Conditionals - Conditional works now and increments under the Amethyst click function, so guessing I need a function to apply to all of those clicks, instead of putting conditionals under each one, be DRY!
-
+    }
 
 
 
