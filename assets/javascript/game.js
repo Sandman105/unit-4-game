@@ -110,6 +110,24 @@ $(document).ready(function () {
     $("#amethyst").on("click", function () {
         userTotalScore += parseInt(crystalAmethyst);
         $("#user-score").html(userTotalScore);
+
+        if (userTotalScore > gameRandomNumber) {
+            loss--;
+            alert("You Lose, Try Again");
+            $("#loser").val(loss);
+    
+            initializeCrystalGame();
+        }
+    
+        else if (userTotalScore === gameRandomNumber) {
+            wins++;
+            alert("You Win!");
+            $("#winner").val(wins);
+    
+    
+            initializeCrystalGame();
+    
+        }
     });
 
     $("#obsidian").on("click", function () {
@@ -141,23 +159,7 @@ $(document).ready(function () {
 
     //Start Conditionals - when I uncomment the conditional statements, the randomNumber
 
-    if (userTotalScore > gameRandomNumber) {
-        loss--;
-        alert("You Lose, Try Again");
-        $("#loser").val(loss);
-
-        initializeCrystalGame();
-    }
-
-    else if (userTotalScore === gameRandomNumber) {
-        wins++;
-        alert("You Win!");
-        $("#winner").val(wins);
-
-
-        initializeCrystalGame();
-
-    }
+   
 
     
 
