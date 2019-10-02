@@ -44,8 +44,8 @@ $(document).ready(function () {
 
     function initializeCrystalGame() {
 
-        var gameRandomNumber = computerRandomNum(19, 120);
-        var userTotalScore = 0;
+        gameRandomNumber = computerRandomNum(19, 120);
+        userTotalScore = 0;
         crystalAmethyst = computerRandomNum(1, 12);
         crystalObsidian = computerRandomNum(1, 12);
         crystalTurquoise = computerRandomNum(1, 12);
@@ -93,7 +93,8 @@ $(document).ready(function () {
     }
 
 
-    //Trying to use this function to populate total score with crystals picked
+    //Trying to use this function to populate total score with crystals picked. Working, just had to remove var from userTotalScore since I'm not trying to redefine the variable.
+
     randomCrystalNumber = function () {
         userTotalScore += crystalAmethyst // + computerRandomNum(1,12);
         //userTotalScore += crystalObsidian
@@ -101,7 +102,7 @@ $(document).ready(function () {
         $("#user-score").html(userTotalScore);
     }
     randomCrystalNumber();
-    
+
 
 
     //So these are my on click functions for each one of the crystals. All working.
@@ -126,6 +127,7 @@ $(document).ready(function () {
         $("#user-score").html(userTotalScore);
     });
 
+    console.log("User Score " + userTotalScore);
 
     //gameStatus = function (word) {
 
@@ -137,33 +139,27 @@ $(document).ready(function () {
 
 
 
-    //Start Conditionals
-   // if (userTotalScore === computerRandomNumber) {
-   //     wins++;
-        $("#winner").html(wins);
-        alert("You Win!");
+    //Start Conditionals - when I uncomment the conditional statements, the randomNumber
 
-   // }
-
-   // else if (userTotalScore > computerRandomNumber) {
-    //    loss--;
-        initializeCrystalGame();
-        $("#loser").html(loss);
+    if (userTotalScore > gameRandomNumber) {
+        loss--;
         alert("You Lose, Try Again");
-   // }
+        $("#loser").val(loss);
+
+        initializeCrystalGame();
+    }
+
+    else if (userTotalScore === gameRandomNumber) {
+        wins++;
+        alert("You Win!");
+        $("#winner").val(wins);
 
 
+        initializeCrystalGame();
 
+    }
 
-
-
-
-
-
-
-
-
-
+    
 
     //Need to initialze the start of a new game on a win or loss, so need to call the initializeCrystalGame function.
 
