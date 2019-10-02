@@ -5,53 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--<link rel="stylesheet" href="assets/css/reset.css">-->
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="images" href="assets/images/">
     <title>Crystals Collector Game</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-11">
-                <h1>Crystal Collector Game</h1>
-            </div>
+    <div class="content">
+        <div class="container">
             <div class="row">
-                <div class="col">
-                    <h2 id="winner">Wins: <span id="winner-text">0</span></h2>
+                <div class="col-lg-11">
+                    <h1>Crystal Collector Game</h1>
                 </div>
-                <div class="col">
-                    <h2 id="loser">Loss: <span id="loser-text">0</span></h2>
+                <div class="row">
+                    <div class="col">
+                        <h2 id="winner">Wins: <span id="winner-text">0</span></h2>
+                    </div>
+                    <div class="col">
+                        <h2 id="loser">Loss: <span id="loser-text">0</span></h2>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+        <div>
+            <h2>
+                <p>Pick either of one the buttons; Amethyst, Obsidian, Turquoise, or Quartz. Match the score of the Random Game Number and get a win. Give it a try, enjoy!</p>
+            </h2>
+            <h1>Random Game Number</h1>
+            <h1 id="computer-number"></h1>
+
+        </div>
+
+        <div class="crystals">
+
+
+            <button id="amethyst">Amethyst</button>
+            <button id="obsidian">Obsidian</button>
+            <button id="turquoise">Turquoise</button>
+            <button id="quartz">Quartz</button>
+
+        </div>
+
+
+
+        <div>
+            <h1>Your Score</h1>
+            <h1 id="user-score">Total</h1>
+        </div>
     </div>
-
-
-    <div>
-        <h1 id="computer-number"></h1>
-
-    </div>
-
-    <div>
-
-        <!--<img src="assets/images/Amethyst.png" alt="amethyst">-->
-        <button id="amethyst">Amethyst</button>
-        <button id="obsidian">Obsidian</button>
-        <button id="turquoise">Turquoise</button>
-        <button id="quartz">Quartz</button>
-
-    </div>
-
-
-
-    <div>
-        <h1 id="user-score">Total</h1>
-    </div>
-
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

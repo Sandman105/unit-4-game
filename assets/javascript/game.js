@@ -115,18 +115,18 @@ $(document).ready(function () {
             loss++;
             alert("You Lose, Try Again");
             $("#loser-text").text(loss);
-    
+
             initializeCrystalGame();
         }
-    
+
         else if (userTotalScore === gameRandomNumber) {
             wins++;
             alert("You Win!");
             $("#winner-text").text(wins);
-    
-    
+
+
             initializeCrystalGame();
-    
+
         }
     });
 
@@ -157,11 +157,11 @@ $(document).ready(function () {
 
 
 
-    //Start Conditionals - when I uncomment the conditional statements, the randomNumber
+    //Conditionals - Conditional works now and increments under the Amethyst click function, so guessing I need a function to apply to all of those clicks, instead of putting conditionals under each one, be DRY!
 
-   
 
-    
+
+
 
     //Need to initialze the start of a new game on a win or loss, so need to call the initializeCrystalGame function.
 

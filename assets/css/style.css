@@ -1,6 +1,14 @@
 body {
     background: #666666;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
 }
+
+/*.content {
+    max-width: 500px;
+    margin: auto;
+    padding: 10px;
+}*/
 
 div {
     margin: 20px;
@@ -9,27 +17,59 @@ div {
 }
 
 h1 {
-    margin: 10px;
+    margin: auto;
     padding: 20px;
     font-weight: 700;
-    margin-right: 490px;
+    /*margin-right: 490px;*/
     text-align: center;
     border-radius: 10px;
+    border: 2px solid black;
     background: #00FFFF;
+}
+
+p {
+    font-weight: 100;
+    border: 3px solid black;
 }
 
 h2 {
-    margin: 40px;
+    margin: auto;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
+    border: 2px solid black;
     background: #00FFFF;
 
 }
 
+.crystals {
+    margin: auto;
+    max-width: 670px;
+    border: solid 10px black;
+}
 button {
-    margin: 50px;
-    padding: 40px;
+    margin: auto;
+    padding: 50px;
+    box-sizing: content-box;
     border-radius: 10px;
     background: #437C17;
+}
+
+#amethyst {
+    background: purple;
+    color: cornsilk;
+    
+}
+#obsidian {
+    background: black;
+    color: cornsilk;
+}
+
+#turquoise {
+    background: turquoise;
+    color: cornsilk;
+}
+#quartz {
+    background: silver;
+    color: cornsilk;
 }
